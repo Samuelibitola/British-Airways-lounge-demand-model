@@ -10,27 +10,68 @@ As BA prepares for future operations at **Heathrow Terminal 3**, it’s essentia
 ## 🎯 Purpose
 BA’s future flight schedules and fleet plans are dynamic, so the goal is to build a **flexible and scalable modeling approach** that forecasts how many passengers are eligible for lounge access on a typical day.
 
-To support this, I created a **lookup table** that allows planners to estimate lounge eligibility percentages across different flight groupings. This tool enables forecasting even when exact aircraft or schedule details are not yet finalized.
+To support this, I created a **lookup framework** that allows planners to estimate lounge eligibility percentages across different flight groupings. This tool enables forecasting even when exact aircraft or schedule details are not yet finalized.
 
 ---
 
-## 🔍 Methodology
-The modeling approach focuses on:
-- **Grouping flights logically** (e.g., by time of day, route type, or destination region)
-- **Applying eligibility assumptions** based on cabin class, frequent flyer tier, and partner status
-- **Estimating proportions** of passengers who would likely qualify for lounge access within each group
+## 🔍 Understanding Lounge Eligibility
+Before modeling lounge demand, it’s important to understand **who is typically eligible** for lounge access.  
+Eligibility is primarily determined by:
+- **Travel class** (First, Business, Premium Economy, Economy)
+- **Customer loyalty tier** (Gold, Silver, Bronze, Blue)
+- **Partner airline status** (e.g., Oneworld Sapphire, Emerald)
 
-These groupings and assumptions create a reusable framework that the **Airport Planning Team** can apply to upcoming schedules and scenario testing.
+Each tier supports a different group of travelers, and lounge capacity planning depends on forecasting how many eligible passengers fall into each of these categories.
+
+In practice, planners estimate the **proportion of passengers** eligible for each lounge tier using broad, reusable categories that can apply to future schedules.
+
+---
+
+## 🧮 Creating Eligibility Assumptions
+Now that the lounge tiers are understood, the next step is to **estimate the percentage of customers eligible** for each tier across the flight schedule.
+
+Because BA is planning for the future, the model needs to remain **flexible** and **high-level**, rather than tied to specific aircraft types or flight numbers.
+
+### 🗂 Example Groupings
+To build this lookup model, flights can be logically grouped by:
+- **Time of Day:** Early morning, mid-day, or evening departures  
+- **Type of Route:** Short-haul vs. long-haul  
+- **Region or Destination Group:** Europe, North America, Asia, etc.  
+
+These groupings allow the model to apply consistent assumptions across various schedules and seasons.
+
+---
+
+## 🧾 Eligibility Tiers
+Each group of passengers is assigned an estimated eligibility proportion for one of the following tiers:
+
+| Tier | Lounge Type | Description |
+|------|--------------|--------------|
+| **Tier 1** | Concorde Room | Exclusive access for First Class and top-tier elites |
+| **Tier 2** | First Lounge | For premium customers and mid-tier elites |
+| **Tier 3** | Club Lounge | For Business Class and frequent travelers |
+
+There is no single correct method — what matters most is that **assumptions are logical, justifiable, and easy to apply** to future schedules.
+
+---
+
+## ⚙️ Methodology Summary
+The modeling framework focuses on:
+- **Grouping flights** logically by route, region, and time  
+- **Applying eligibility assumptions** for each group  
+- **Estimating proportions** of eligible passengers for Tiers 1–3  
+
+This structured approach gives the **Airport Planning Team** a reusable model for testing future scenarios and planning capacity efficiently.
 
 ---
 
 ## 📈 Outcome
-The final lookup table helps British Airways:
-- Forecast total lounge users for any future schedule  
-- Anticipate peak-demand periods  
-- Identify where **new lounge investments** may be required  
+This model enables British Airways to:
+- Forecast total lounge users for each tier  
+- Identify **peak-demand windows**  
+- Prioritize **future investment decisions** in lounge infrastructure  
 
 ---
 
 ## 💡 Impact
-This model translates airline data into actionable business insights, helping BA deliver a seamless and efficient experience for its most valued customers while ensuring strategic use of lounge capacity.
+This framework transforms raw airline data into **strategic insights**, allowing British Airways to maintain its premium standards while efficiently managing lounge resources and passenger experience.
